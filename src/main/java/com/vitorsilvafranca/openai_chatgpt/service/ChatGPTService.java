@@ -27,7 +27,7 @@ public class ChatGPTService {
         Request request = new Request.Builder().url("https://api.openai.com/v1/chat/completions").method("POST", body)
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Authorization",
-                        "Bearer API_KEY")
+                        "Bearer API_KEY") // -----> REPLACE API_KEY <-----
                 .build();
         try (Response response = client.newCall(request).execute()) {
             if (response.isSuccessful()) {
